@@ -18,8 +18,6 @@ LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
 
-
-// Ñîçäàåòñÿ ãëàâíîå îêíî
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
                      _In_ LPWSTR    lpCmdLine,
@@ -45,8 +43,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg;
 
-    // Main message loop
-    while (GetMessage(&msg, nullptr, 0, 0)) // Цыкл для работы главного окна
+    // Цыкл для работы главного окна
+    while (GetMessage(&msg, nullptr, 0, 0)) 
     {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
@@ -127,7 +125,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 
 
-// Ñîçäàåòñÿ ñ âåðõó êíîïêà About
+// Создание чего-то непонятного | Шутка
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
@@ -166,7 +164,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     return 0;
 }
 
-// Ñîçäàåòñÿ ñ âåðõó êíîïêà About
+// Создание кнопки About
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     UNREFERENCED_PARAMETER(lParam);
